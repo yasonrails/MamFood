@@ -8,7 +8,8 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.2.4.1'
 gem 'redis'
-
+gem 'money-rails'
+gem 'stripe'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'sassc-rails'
@@ -17,7 +18,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'activeadmin', github: 'activeadmin/activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
-
+gem 'stripe_event'
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
