@@ -1,4 +1,7 @@
 <div class="container">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    Breakfast
+  </div>
   <h1>Plats à emporter</h1>
   <div class="row">
     <% @products.each do |product| %>
@@ -9,10 +12,26 @@
             <h5 class="card-title"><%= product.name %></h5>
             <p class="card-text"><%= product.description %></p>
             <p>Prix: <%= humanized_money_with_symbol(product.price) %></p>
-            <%= link_to "Voir", product_path(product), class: "btn btn-primary" %>
+            <%= link_to "More details", product_path(product), class: "btn btn-primary" %>
+            <%= image_tag "logo.png", width: '50%' %>
           </div>
         </div>
       </div>
     <% end %>
+  </div>
+</div>
+<%= link_to 'Back', root_path, class: 'btn btn-primary' %>
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="/assets/slide_2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="/assets/slide_1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="/assets/slide_3.jpg" class="d-block w-100" alt="...">
+    </div>
   </div>
 </div>
